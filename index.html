@@ -113,10 +113,10 @@ body{overflow:hidden}
 .center .label{margin-top:18px;animation:up 1.4s .9s both}
 @keyframes up{from{opacity:0;transform:translateY(12px);filter:blur(6px)}}
 
-.doors{display:flex;gap:clamp(22px,5vw,64px);margin-top:46px;list-style:none}
+.doors{display:flex;gap:clamp(18px,4vw,52px);margin-top:46px;list-style:none}
 .doors li{animation:up 1.2s both}
 .doors li:nth-child(1){animation-delay:1.2s}.doors li:nth-child(2){animation-delay:1.35s}
-.doors li:nth-child(3){animation-delay:1.5s}.doors li:nth-child(4){animation-delay:1.65s}
+.doors li:nth-child(3){animation-delay:1.5s}.doors li:nth-child(4){animation-delay:1.65s}.doors li:nth-child(5){animation-delay:1.8s}
 .doors a{display:block;text-decoration:none;text-align:center;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .doors small{display:block;font-family:var(--type);font-size:.6rem;letter-spacing:.3em;color:var(--mist);opacity:.7;margin-bottom:4px}
 .doors b{display:block;font-family:var(--script);font-weight:400;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1;text-shadow:0 2px 20px rgba(4,12,34,.9);transition:color .4s, filter .4s}
@@ -134,6 +134,7 @@ body{overflow:hidden}
 
 @media (max-width:720px){
   .doors{display:grid;grid-template-columns:1fr 1fr;gap:26px 48px;margin-top:38px}
+  .doors li:last-child{grid-column:1/-1}
   .corner{bottom:16px}
   .corner.r{display:none}
   .corner.l{left:0;right:0;text-align:center}
@@ -149,6 +150,7 @@ body{overflow:hidden}
   <div class="reveal" id="reveal" aria-hidden="true">
     <img data-key="home" class="on" src="images/nicole-hernandez-layers-tv-wide.jpg" alt="" />
     <img data-key="layers" src="images/nicole-hernandez-layers-portrait.jpg" alt="" />
+    <img data-key="reimagined" src="images/nicole-hernandez-layers-tv-lean.jpg" alt="" />
     <img data-key="videos" src="images/nicole-hernandez-layers-tv-close.jpg" alt="" />
     <img data-key="about" src="images/nicole-hernandez-film-laugh.jpg" alt="" />
     <img data-key="press" src="images/nicole-hernandez-film-fountain.jpg" alt="" />
@@ -162,9 +164,10 @@ body{overflow:hidden}
     <nav aria-label="Main">
       <ul class="doors">
         <li><a href="layers.html" data-key="layers"><small>I</small><b>Layers</b></a></li>
-        <li><a href="videos.html" data-key="videos"><small>II</small><b>Videos</b></a></li>
-        <li><a href="about.html" data-key="about"><small>III</small><b>About</b></a></li>
-        <li><a href="press.html" data-key="press"><small>IV</small><b>Press</b></a></li>
+        <li><a href="reimagined.html" data-key="reimagined"><small>II</small><b>Reimagined</b></a></li>
+        <li><a href="videos.html" data-key="videos"><small>III</small><b>Videos</b></a></li>
+        <li><a href="about.html" data-key="about"><small>IV</small><b>About</b></a></li>
+        <li><a href="press.html" data-key="press"><small>V</small><b>Press</b></a></li>
       </ul>
     </nav>
   </div>

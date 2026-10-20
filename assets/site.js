@@ -1,5 +1,10 @@
 // Nicole Hernandez — shared behaviour: warm cursor light, blue page
 // transitions, scroll reveals, and a lightbox for videos + photos.
+
+// Web3Forms access key made with Destined Echo's email (https://web3forms.com).
+// Used by the inquiry form and the Reimagined island sign-up.
+window.NH_FORM_KEY = 'PASTE-DESTINED-ECHO-ACCESS-KEY-HERE';
+
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = matchMedia('(pointer: fine)').matches;

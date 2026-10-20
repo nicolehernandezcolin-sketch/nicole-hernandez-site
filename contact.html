@@ -116,6 +116,7 @@
   <a class="home" href="index.html" aria-label="Nicole Hernandez, home"><img src="images/wordmark-cream.png" alt="" width="672" height="247" /></a>
   <nav aria-label="Main">
     <a href="layers.html">Layers</a>
+    <a href="reimagined.html">Reimagined</a>
     <a href="videos.html">Videos</a>
     <a href="about.html">About</a>
     <a href="press.html">Press</a>
@@ -202,7 +203,7 @@
   // Paste the Web3Forms access key made with Destined Echo's email
   // (get one free at https://web3forms.com). Submissions are emailed
   // to that address; the address itself never appears on the site.
-  const WEB3FORMS_KEY = 'PASTE-DESTINED-ECHO-ACCESS-KEY-HERE';
+  const WEB3FORMS_KEY = window.NH_FORM_KEY;   // set once in assets/site.js
   // ────────────────────────────────────────────────────────────────
 
   const form = document.getElementById('form');
