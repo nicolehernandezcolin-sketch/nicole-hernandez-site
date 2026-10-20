@@ -145,6 +145,10 @@
   font-family:'Homemade Apple',cursive;font-size:.92rem;line-height:30px;color:#1d3c86;
 }
 .postcard .right{border-left:1px dashed rgba(10,71,168,.3);padding-left:16px;display:flex;flex-direction:column;gap:12px}
+.logo-stamp{align-self:flex-end;width:118px;padding:6px;transform:rotate(3deg);background:radial-gradient(circle, transparent 3px, #fffaf0 3.5px) -5px -5px/10px 10px;filter:drop-shadow(0 3px 5px rgba(26,43,85,.25))}
+.logo-stamp span{display:grid;place-items:center;gap:6px;aspect-ratio:4/5;padding:12px 8px;background:var(--cobalt);outline:1px solid rgba(255,250,240,.55);outline-offset:-5px}
+.logo-stamp img{width:100%;height:auto}
+.logo-stamp small{font-family:var(--type);font-size:.42rem;letter-spacing:.14em;color:#fffaf0;opacity:.85;text-align:center}
 .postcard .stamp-pick{display:flex;gap:6px;justify-content:flex-end}
 .postcard .stamp-pick button{width:40px;height:48px;border:0;cursor:pointer;font-size:1.2rem;border-radius:2px;background:var(--sea-light);opacity:.45;transition:opacity .2s, transform .2s}
 .postcard .stamp-pick button[aria-pressed="true"]{opacity:1;transform:rotate(-6deg);outline:2px dashed #fffaf0;outline-offset:-5px}
@@ -156,12 +160,16 @@
 /* letter flying off as a bottle */
 .flyer{position:fixed;z-index:97;pointer-events:none;width:46px;transition:left 1.6s cubic-bezier(.4,0,.2,1), top 1.6s cubic-bezier(.5,-0.4,.3,1), transform 1.6s, opacity .5s 1.3s}
 
-.writer{border:0;margin-top:22px;padding:16px 18px;background:#fffaf0;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(10,71,168,.18)}
+.writer{margin-top:22px;padding:20px 22px;background:#fffaf0;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(10,71,168,.18)}
+.writer-head{margin-bottom:6px}
+.writer-head h3{font-family:var(--script);font-weight:400;font-size:2.2rem;line-height:1;color:var(--cobalt);margin:4px 0 6px}
+.writer-head p:last-child{font-size:1rem;color:#4b5f8f;line-height:1.5}
+.fine{line-height:1.7;max-width:46em}
 .writer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:10px}
 .writer label{font-family:var(--type);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#4b5f8f}
 .writer-grid input{display:block;width:100%;margin-top:4px;border:0;border-bottom:1px solid rgba(10,71,168,.35);background:transparent;font-family:var(--serif);font-size:1.05rem;color:var(--ink);padding:6px 2px;outline:none;text-transform:none;letter-spacing:0}
-.writer .optin{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-family:var(--serif);font-size:.98rem;letter-spacing:0;text-transform:none;color:var(--ink);line-height:1.45;cursor:pointer}
-.writer .optin input{margin-top:4px;accent-color:var(--cobalt)}
+.writer .optin{display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start;margin-top:18px;padding-top:14px;border-top:1px dashed rgba(10,71,168,.25);font-family:var(--serif);font-size:.98rem;letter-spacing:0;text-transform:none;color:var(--ink);line-height:1.45;cursor:pointer}
+.writer .optin input{margin:3px 0 0;width:16px;height:16px;accent-color:var(--cobalt)}
 @media (max-width:720px){.writer-grid{grid-template-columns:1fr}}
 
 /* tea + sign-up */
@@ -328,7 +336,7 @@
   <a href="https://linktr.ee/nicolehernandezcolin" target="_blank" rel="noopener me">Linktree</a>
   <a href="https://music.apple.com/us/album/layers/1818138787" target="_blank" rel="noopener">Apple Music</a>
   <a href="contact.html">Inquiries</a>
-  <small>© 2026 Nicole Hernandez · San Diego</small>
+  <small>© 2026 Nicole Hernandez · Music &amp; management: Destined Echo LLC · San Diego</small>
 </footer>
 
 <!-- ── place panels ── -->
@@ -362,6 +370,7 @@
       <textarea id="msg" maxlength="420" aria-label="Your letter" placeholder="Querida…"></textarea>
     </div>
     <div class="right">
+      <div class="logo-stamp" aria-label="Nicole Hernandez postage stamp"><span><img src="images/wordmark-cream.png" alt="" /><small>ISLA REIMAGINED · 2027</small></span></div>
       <div class="stamp-pick" id="stampPick">
         <button aria-pressed="true" aria-label="Palm stamp">🌴</button>
         <button aria-pressed="false" aria-label="Wave stamp">🌊</button>
@@ -372,21 +381,25 @@
       <div style="margin-top:auto;font-family:var(--type);font-size:.56rem;letter-spacing:.2em;color:#4b5f8f">ISLA REIMAGINED<br>MAR CARIBE</div>
     </div>
   </div>
-  <fieldset class="writer">
-    <legend class="kicker">Before you send · who's writing?</legend>
+  <section class="writer" aria-labelledby="writerTitle">
+    <div class="writer-head">
+      <p class="kicker">Before you send</p>
+      <h3 id="writerTitle">Who's writing?</h3>
+      <p>So we can write back, and save you a seat at the next tea session.</p>
+    </div>
     <div class="writer-grid">
       <label>Name<input id="wName" autocomplete="name" maxlength="60" required /></label>
       <label>Email<input id="wEmail" type="email" autocomplete="email" maxlength="120" required /></label>
       <label>Phone<input id="wPhone" type="tel" autocomplete="tel" maxlength="30" required /></label>
     </div>
-    <label class="optin"><input type="checkbox" id="wOptin" /> Yes, send me letters from the island: news about <em>Reimagined</em>, tea sessions near me, and first listens, by email and text. Unsubscribe anytime.</label>
+    <label class="optin"><input type="checkbox" id="wOptin" /><span>Yes, keep me posted by email and text about <em>Reimagined</em>, tea sessions near me, and first listens. I can unsubscribe anytime.</span></label>
     <p class="status" id="writerStatus" role="status"></p>
-  </fieldset>
+  </section>
   <div class="btns">
     <button class="btn" id="sendSea">Seal &amp; send to sea ⚓</button>
     <button class="btn ghost" id="savePc">Save as a postcard</button>
   </div>
-  <p class="note-small">Your letter itself stays private on this device. Your name, email and phone go to Nicole's team so we can keep in touch. Saved postcards are yours to share or mail.</p>
+  <p class="note-small fine">Your letter stays private on this device. Your name, email and phone number are shared only with Destined Echo LLC, Nicole's management and home of her music, to keep you in the loop. Saved postcards are yours to share or mail.</p>
 </template>
 
 <template id="t-te">
@@ -654,6 +667,7 @@
   }
 
   // ── save the postcard as an image ──
+  const logo = new Image(); logo.src = 'images/wordmark-cream.png';
   function drawPostcard(l) {
     const W = 1500, H = 1000, c = document.createElement('canvas');
     c.width = W; c.height = H;
@@ -672,8 +686,18 @@
       line += w + ' ';
     }
     if (y <= H - 120) x.fillText(line, 90, y);
-    x.fillStyle = '#7cc4ee'; x.fillRect(W - 250, 110, 150, 180);
-    x.font = '90px serif'; x.textAlign = 'center'; x.fillText(l.stamp, W - 175, 235);
+    // logo postage stamp: perforated cream edge, cobalt face, cream wordmark
+    const sx = W - 300, sy = 90, sw = 200, sh = 250;
+    x.fillStyle = '#fffaf0'; x.fillRect(sx - 14, sy - 14, sw + 28, sh + 28);
+    x.fillStyle = '#ffffff';
+    for (let i = sx - 14; i <= sx + sw + 14; i += 18) { [sy - 14, sy + sh + 14].forEach(yy => { x.beginPath(); x.arc(i, yy, 6, 0, 7); x.fill(); }); }
+    for (let j = sy - 14; j <= sy + sh + 14; j += 18) { [sx - 14, sx + sw + 14].forEach(xx => { x.beginPath(); x.arc(xx, j, 6, 0, 7); x.fill(); }); }
+    x.fillStyle = '#0a47a8'; x.fillRect(sx, sy, sw, sh);
+    x.strokeStyle = 'rgba(255,250,240,.6)'; x.lineWidth = 2; x.strokeRect(sx + 8, sy + 8, sw - 16, sh - 16);
+    if (logo.complete && logo.naturalWidth) { const lw = sw - 40, lh = lw * logo.naturalHeight / logo.naturalWidth; x.drawImage(logo, sx + 20, sy + 70, lw, lh); }
+    x.fillStyle = '#fffaf0'; x.textAlign = 'center'; x.font = '16px "Courier Prime"'; x.fillText('ISLA REIMAGINED · 2027', sx + sw / 2, sy + sh - 30);
+    x.font = '60px serif'; x.fillText(l.stamp, sx - 70, sy + 200);
+    x.lineWidth = 1;
     x.textAlign = 'left'; x.font = '26px "Courier Prime"'; x.fillStyle = '#4b5f8f';
     x.fillText('TO', 990, 470); x.fillText('FROM', 990, 640);
     x.font = '34px "Homemade Apple"'; x.fillStyle = '#1d3c86';
