@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nicole Hernandez — Singer-Songwriter &amp; Creative Entrepreneur | San Diego</title>
+<meta name="description" content="Nicole Hernandez is a singer-songwriter and creative entrepreneur based in San Diego. Step into the world of her debut album Layers, her music videos, and NEXUS." />
+<meta name="author" content="Nicole Hernandez" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://nicolehernandez.co/" />
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#040c22" />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Nicole Hernandez" />
+<meta property="og:title" content="Nicole Hernandez" />
+<meta property="og:description" content="Singer-songwriter based in San Diego. Debut album Layers out now." />
+<meta property="og:url" content="https://nicolehernandez.co/" />
+<meta property="og:image" content="https://nicolehernandez.co/images/share-logo.png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1350" />
+<meta property="og:image:alt" content="Nicole Hernandez wordmark" />
+<meta property="profile:first_name" content="Nicole" />
+<meta property="profile:last_name" content="Hernandez" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://nicolehernandez.co/images/share-logo.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nicolehernandez.co/#website",
+      "url": "https://nicolehernandez.co/",
+      "name": "Nicole Hernandez",
+      "publisher": { "@id": "https://nicolehernandez.co/#nicole" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nicolehernandez.co/#nicole",
+      "name": "Nicole Hernandez",
+      "alternateName": "Nicole Hernandez Colin",
+      "url": "https://nicolehernandez.co/",
+      "image": "https://nicolehernandez.co/images/nicole-hernandez-layers-portrait.jpg",
+      "jobTitle": "Singer-Songwriter & Creative Entrepreneur",
+      "description": "San Diego singer-songwriter and creative entrepreneur. Creator of the Afro-Cuban R&B album Layers and the short film Layered Visions, and founder of NEXUS.",
+      "hasOccupation": [
+        { "@type": "Occupation", "name": "Singer-songwriter" },
+        { "@type": "Occupation", "name": "Creative entrepreneur" }
+      ],
+      "homeLocation": { "@type": "Place", "name": "San Diego, California" },
+      "knowsLanguage": ["English", "Spanish"],
+      "founder": { "@id": "https://nicolehernandez.co/#nexus" },
+      "sameAs": [
+        "https://www.youtube.com/@nicolehernandezcolin",
+        "https://www.tiktok.com/@nicolehernandezcolin",
+        "https://linktr.ee/nicolehernandezcolin",
+        "https://music.apple.com/us/album/layers/1818138787",
+        "https://soundcloud.com/nicole-hernandez-268512016",
+        "https://nexusglobal.info/"
+      ],
+      "subjectOf": [
+        { "@type": "PodcastEpisode", "name": "Nicole Hernandez's music crosses borders, languages and genres", "url": "https://www.kpbs.org/podcasts/the-finest/nicole-hernandezs-music-crosses-borders-languages-and-genres", "partOfSeries": { "@type": "PodcastSeries", "name": "The Finest", "publisher": { "@type": "Organization", "name": "KPBS" } } },
+        { "@type": "NewsArticle", "headline": "10 standout San Diego artists from the 2026 NPR Tiny Desk Contest", "url": "https://www.kpbs.org/news/arts-culture/2026/05/12/10-standout-san-diego-artists-from-the-2026-npr-tiny-desk-contest", "datePublished": "2026-05-12", "publisher": { "@type": "Organization", "name": "KPBS" } }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nicolehernandez.co/#nexus",
+      "name": "NEXUS",
+      "url": "https://nexusglobal.info/",
+      "founder": { "@id": "https://nicolehernandez.co/#nicole" },
+      "sameAs": ["https://www.instagram.com/n3xus.now/"]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+/* ── landing: night sea ── */
+body{overflow:hidden}
+.land{
+  position:fixed;inset:0;overflow:hidden;
+  background:linear-gradient(to bottom,#020817 0%,#06183f 34%,#0b3378 52%,#0d4aa6 53%,#0a3a8c 70%,#061f52 88%,#030b22 100%);
+}
+#sea{position:absolute;inset:0;width:100%;height:100%}
+
+/* the photo hidden in the dark, revealed by the warm light */
+.reveal{
+  position:absolute;inset:0;pointer-events:none;
+  -webkit-mask-image:radial-gradient(circle var(--r,30vmax) at var(--x,50%) var(--y,50%), #000 0%, rgba(0,0,0,.6) 34%, transparent 70%);
+          mask-image:radial-gradient(circle var(--r,30vmax) at var(--x,50%) var(--y,50%), #000 0%, rgba(0,0,0,.6) 34%, transparent 70%);
+}
+.reveal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s ease;filter:saturate(1.05) contrast(1.05)}
+.reveal img.on{opacity:.95}
+.reveal.ghost{filter:blur(14px);opacity:.55}           /* motion-blur trail */
+.reveal::after{                                          /* warm firelight tint */
+  content:"";position:absolute;inset:0;mix-blend-mode:soft-light;
+  background:radial-gradient(circle calc(var(--r,30vmax) * .9) at var(--x,50%) var(--y,50%), rgba(242,162,74,.75), transparent 70%);
+}
+
+/* center */
+.center{
+  position:relative;z-index:5;height:100%;
+  display:grid;place-content:center;justify-items:center;text-align:center;padding:0 16px;
+}
+.center h1 img{width:clamp(270px,46vw,600px);height:auto;filter:drop-shadow(0 6px 30px rgba(4,12,34,.8));animation:focus 2.2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes focus{from{opacity:0;filter:blur(18px) drop-shadow(0 6px 30px rgba(4,12,34,.8));transform:translateX(-30px) scale(1.04)}}
+.center .label{margin-top:18px;animation:up 1.4s .9s both}
+@keyframes up{from{opacity:0;transform:translateY(12px);filter:blur(6px)}}
+
+.doors{display:flex;gap:clamp(22px,5vw,64px);margin-top:46px;list-style:none}
+.doors li{animation:up 1.2s both}
+.doors li:nth-child(1){animation-delay:1.2s}.doors li:nth-child(2){animation-delay:1.35s}
+.doors li:nth-child(3){animation-delay:1.5s}.doors li:nth-child(4){animation-delay:1.65s}
+.doors a{display:block;text-decoration:none;text-align:center;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.doors small{display:block;font-family:var(--type);font-size:.6rem;letter-spacing:.3em;color:var(--mist);opacity:.7;margin-bottom:4px}
+.doors b{display:block;font-family:var(--script);font-weight:400;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1;text-shadow:0 2px 20px rgba(4,12,34,.9);transition:color .4s, filter .4s}
+.doors a:hover{transform:translateY(-6px)}
+.doors a:hover b,.doors a:focus-visible b{color:var(--amber);filter:drop-shadow(0 0 14px rgba(242,162,74,.5))}
+
+.corner{position:absolute;z-index:6;bottom:22px;font-family:var(--type);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;animation:up 1.2s 2s both}
+.corner.l{left:clamp(16px,4vw,40px);text-decoration:none}
+.corner.r{right:clamp(16px,4vw,40px);display:flex;gap:18px}
+.corner a{text-decoration:none;opacity:.75}
+.corner a:hover,.corner.l:hover{opacity:1;color:var(--amber)}
+.corner .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:8px;box-shadow:0 0 10px var(--amber);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hint{position:absolute;z-index:6;top:24px;left:50%;transform:translateX(-50%);font-family:var(--type);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;opacity:.5;animation:up 1.2s 2.4s both}
+
+@media (max-width:720px){
+  .doors{display:grid;grid-template-columns:1fr 1fr;gap:26px 48px;margin-top:38px}
+  .corner{bottom:16px}
+  .corner.r{display:none}
+  .corner.l{left:0;right:0;text-align:center}
+  .hint{display:none}
+}
+</style>
+</head>
+<body data-no-glow>
+
+<main class="land" id="land">
+  <canvas id="sea" aria-hidden="true"></canvas>
+  <div class="reveal ghost" id="ghost" aria-hidden="true"></div>
+  <div class="reveal" id="reveal" aria-hidden="true">
+    <img data-key="home" class="on" src="images/nicole-hernandez-layers-tv-wide.jpg" alt="" />
+    <img data-key="layers" src="images/nicole-hernandez-layers-portrait.jpg" alt="" />
+    <img data-key="videos" src="images/nicole-hernandez-layers-tv-close.jpg" alt="" />
+    <img data-key="about" src="images/nicole-hernandez-film-laugh.jpg" alt="" />
+    <img data-key="press" src="images/nicole-hernandez-film-fountain.jpg" alt="" />
+  </div>
+
+  <p class="hint" aria-hidden="true">move the light</p>
+
+  <div class="center">
+    <h1><img src="images/wordmark-cream.png" alt="Nicole Hernandez" width="672" height="247" /></h1>
+    <p class="label">Singer-songwriter · San Diego</p>
+    <nav aria-label="Main">
+      <ul class="doors">
+        <li><a href="layers.html" data-key="layers"><small>I</small><b>Layers</b></a></li>
+        <li><a href="videos.html" data-key="videos"><small>II</small><b>Videos</b></a></li>
+        <li><a href="about.html" data-key="about"><small>III</small><b>About</b></a></li>
+        <li><a href="press.html" data-key="press"><small>IV</small><b>Press</b></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <a class="corner l" href="layers.html"><span class="dot" aria-hidden="true"></span>Layers · out now</a>
+  <div class="corner r">
+    <a href="contact.html">Inquiries</a>
+    <a href="https://www.youtube.com/@nicolehernandezcolin" target="_blank" rel="noopener me">YouTube</a>
+    <a href="https://www.tiktok.com/@nicolehernandezcolin" target="_blank" rel="noopener me">TikTok</a>
+    <a href="https://music.apple.com/us/album/layers/1818138787" target="_blank" rel="noopener">Apple Music</a>
+  </div>
+</main>
+
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const land = document.getElementById('land');
+  const reveal = document.getElementById('reveal');
+  const ghost = document.getElementById('ghost');
+  ghost.innerHTML = reveal.innerHTML;           // same photos, blurred, lagging behind
+
+  // ── hovering a door shows that room's photo in the light ──
+  const show = key => [reveal, ghost].forEach(layer =>
+    layer.querySelectorAll('img').forEach(img => img.classList.toggle('on', img.dataset.key === key)));
+  document.querySelectorAll('.doors a').forEach(a => {
+    a.addEventListener('pointerenter', () => show(a.dataset.key));
+    a.addEventListener('focus', () => show(a.dataset.key));
+    a.addEventListener('pointerleave', () => show('home'));
+    a.addEventListener('blur', () => show('home'));
+  });
+
+  // ── the light: follows the pointer, drifts on its own when idle ──
+  let W, H, tx, ty, lx, ly, gx, gy, lastMove = -1e9;
+  function size() { W = land.clientWidth; H = land.clientHeight; }
+  size();
+  tx = lx = gx = W * .5; ty = ly = gy = H * .58;
+  addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; lastMove = performance.now(); });
+  addEventListener('pointerdown', e => { tx = e.clientX; ty = e.clientY; lastMove = performance.now(); });
+
+  // ── sea glints + stars on canvas ──
+  const cv = document.getElementById('sea');
+  const ctx = cv.getContext('2d');
+  let dpr, glints = [], stars = [];
+  function fit() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const horizon = H * .53;
+    glints = Array.from({ length: Math.round(W * H / 1900) }, () => {
+      const depth = Math.pow(Math.random(), .7);              // 0 = horizon, 1 = shore
+      return {
+        x: Math.random() * W,
+        y: horizon + depth * (H - horizon),
+        len: 2 + depth * 16 * Math.random(),
+        w: .6 + depth * 1.6,
+        ph: Math.random() * 6.28,
+        sp: .6 + Math.random() * 2.2,
+        dr: (.05 + depth * .25) * (Math.random() > .5 ? 1 : -1)
+      };
+    });
+    stars = Array.from({ length: Math.round(W / 9) }, () => ({
+      x: Math.random() * W, y: Math.random() * horizon * .92,
+      r: Math.random() * 1.2 + .2, ph: Math.random() * 6.28, sp: .3 + Math.random()
+    }));
+  }
+  fit();
+  addEventListener('resize', () => { size(); fit(); });
+
+  function frame(now) {
+    const t = now / 1000;
+    if (now - lastMove > 3500) {                           // idle: wander like a lantern
+      tx = W * (.5 + .3 * Math.sin(t * .23));
+      ty = H * (.56 + .2 * Math.sin(t * .37 + 1));
+    }
+    lx += (tx - lx) * .09; ly += (ty - ly) * .09;
+    gx += (lx - gx) * .06; gy += (ly - gy) * .06;           // ghost lags = motion blur
+    reveal.style.setProperty('--x', lx + 'px'); reveal.style.setProperty('--y', ly + 'px');
+    ghost.style.setProperty('--x', gx + 'px'); ghost.style.setProperty('--y', gy + 'px');
+
+    ctx.clearRect(0, 0, W, H);
+    for (const s of stars) {
+      ctx.globalAlpha = .25 + .55 * Math.pow((Math.sin(t * s.sp + s.ph) + 1) / 2, 3);
+      ctx.fillStyle = '#f6efdf';
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.283); ctx.fill();
+    }
+    const R2 = Math.pow(Math.min(W, H) * .32, 2);
+    for (const g of glints) {
+      if (!reduce) { g.x += g.dr; if (g.x < -20) g.x = W + 20; if (g.x > W + 20) g.x = -20; }
+      const d2 = (g.x - lx) ** 2 + (g.y - ly) ** 2;
+      const near = Math.max(0, 1 - d2 / R2);
+      const a = Math.pow((Math.sin(t * g.sp + g.ph) + 1) / 2, 6) * (.55 + near * .45);
+      if (a < .02) continue;
+      ctx.globalAlpha = a;
+      ctx.strokeStyle = near > .25 ? '#ffd9a3' : '#e6eeff';
+      ctx.lineWidth = g.w;
+      ctx.beginPath(); ctx.moveTo(g.x - g.len / 2, g.y); ctx.lineTo(g.x + g.len / 2, g.y); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

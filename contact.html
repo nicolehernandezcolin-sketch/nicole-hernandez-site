@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inquiries — Nicole Hernandez | Managed by Destined Echo</title>
+<meta name="description" content="Booking, press, licensing and collaboration inquiries for Nicole Hernandez. Nicole is managed by Destined Echo." />
+<link rel="canonical" href="https://nicolehernandez.co/contact.html" />
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#040c22" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nicole Hernandez" />
+<meta property="og:title" content="Inquiries — Nicole Hernandez" />
+<meta property="og:url" content="https://nicolehernandez.co/contact.html" />
+<meta property="og:image" content="https://nicolehernandez.co/images/nicole-hernandez-film-bamboo.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://nicolehernandez.co/contact.html",
+  "name": "Inquiries — Nicole Hernandez",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://nicolehernandez.co/#nicole",
+    "name": "Nicole Hernandez",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Management",
+      "name": "Destined Echo",
+      "url": "https://nicolehernandez.co/contact.html",
+      "availableLanguage": ["English", "Spanish"]
+    }
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+.inq{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,7vw,100px);align-items:start;padding-top:20px}
+.side h1{font-size:clamp(3.6rem,8vw,6rem);margin:6px 0 18px}
+.side p{color:var(--cream-dim);max-width:26em}
+.side p + p{margin-top:14px}
+.side .lace{aspect-ratio:2/3;max-width:300px;margin-top:40px;transform:rotate(-2deg)}
+.mgmt{margin-top:30px;padding-top:22px;border-top:1px solid rgba(200,215,242,.2);max-width:26em}
+.mgmt b{display:block;font-family:var(--serif);font-weight:500;font-size:1.6rem;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+
+/* the letter: cream paper inside a lace frame, flips to a sealed envelope when sent */
+.letter-wrap{perspective:1800px}
+.letter{position:relative;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.3,.7,.2,1)}
+.letter.sent{transform:rotateY(180deg)}
+.face{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.paper{
+  position:relative;padding:clamp(26px,4vw,44px);color:#1a2b55;
+  background:#f6efdf;
+  background-image:repeating-linear-gradient(transparent 0 35px, rgba(10,71,168,.08) 35px 36px);
+}
+.paper .to{font-family:var(--script);font-size:2.4rem;line-height:1;color:var(--cobalt)}
+.paper .sub{font-family:var(--type);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;opacity:.65;margin:6px 0 26px}
+.field{display:block;margin-bottom:20px}
+.field span{display:block;font-family:var(--type);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#3b4f80;margin-bottom:6px}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;font-size:1.15rem;color:#14224a;background:transparent;
+  border:0;border-bottom:1px solid rgba(10,71,168,.35);padding:6px 2px;border-radius:0;outline:none;transition:border-color .3s;
+}
+.field textarea{min-height:150px;resize:vertical;line-height:1.55}
+.field select{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230a47a8' stroke-width='1.5'/%3E%3C/svg%3E") right 4px center no-repeat}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--cobalt)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;font-family:var(--type);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border:1px solid rgba(10,71,168,.4);border-radius:999px;color:#1a2b55;transition:background .25s,color .25s}
+.chips input:checked + span{background:var(--cobalt);color:var(--cream);border-color:var(--cobalt)}
+.chips input:focus-visible + span{outline:2px solid var(--amber);outline-offset:2px}
+.date-field{display:none}
+.date-field.on{display:block}
+.hp{position:absolute;left:-9999px}
+.send{
+  display:inline-flex;align-items:center;gap:12px;margin-top:6px;cursor:pointer;
+  font-family:var(--type);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
+  background:var(--cobalt);color:var(--cream);border:0;border-radius:999px;padding:14px 26px;transition:background .3s, transform .3s;
+}
+.send:hover{background:var(--night);transform:translateY(-2px)}
+.send[disabled]{opacity:.6;cursor:wait}
+.status{font-family:var(--type);font-size:.7rem;letter-spacing:.12em;margin-top:14px;min-height:1.2em;color:#a2361f}
+
+.envelope{
+  position:absolute;inset:0;transform:rotateY(180deg);display:grid;place-items:center;text-align:center;
+  background:linear-gradient(160deg,#0d4aa6,#0a2357);color:var(--cream);padding:40px;
+}
+.seal{width:96px;height:96px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#ffbe7a,var(--amber) 55%,#b8661e);box-shadow:0 6px 18px rgba(0,0,0,.4);
+  font-family:var(--script);font-size:2.6rem;color:#5a2b07}
+.envelope h2{font-size:clamp(2.6rem,6vw,3.6rem)}
+.envelope p{color:var(--cream-dim);margin-top:10px}
+.envelope button{margin-top:24px;background:none;border:0;color:var(--cream);cursor:pointer}
+
+@media (max-width:860px){
+  .inq{grid-template-columns:1fr}
+  .side{text-align:center}
+  .side p,.mgmt{margin-left:auto;margin-right:auto}
+  .side .lace{display:none}
+  .row2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="home" href="index.html" aria-label="Nicole Hernandez, home"><img src="images/wordmark-cream.png" alt="" width="672" height="247" /></a>
+  <nav aria-label="Main">
+    <a href="layers.html">Layers</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html">About</a>
+    <a href="press.html">Press</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="inq">
+    <div class="side rv">
+      <p class="label">Inquiries</p>
+      <h1 class="script">Write to us</h1>
+      <p>Booking a show, writing a story, placing a song, or dreaming up something together? Leave a note here and it will reach Nicole's team.</p>
+      <p>Replies usually come within a few days.</p>
+      <div class="mgmt">
+        <p class="label">Management &amp; music</p>
+        <b>Destined Echo</b>
+        <p style="margin-top:8px">Nicole is managed by Destined Echo, home to her catalog and her debut album, <em>Layers</em>.</p>
+      </div>
+      <div class="lace"><img src="images/nicole-hernandez-film-bamboo.jpg" alt="" loading="lazy" width="1061" height="1600" /></div>
+    </div>
+
+    <div class="letter-wrap rv">
+      <div class="letter" id="letter">
+        <form class="face lace" id="form" novalidate>
+          <div class="paper">
+            <p class="to">Dear Destined Echo,</p>
+            <p class="sub">An inquiry for Nicole Hernandez</p>
+
+            <fieldset style="border:0">
+              <legend class="field"><span>What's this about?</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="inquiry_type" value="Booking" checked /><span>Booking</span></label>
+                <label><input type="radio" name="inquiry_type" value="Press & interviews" /><span>Press</span></label>
+                <label><input type="radio" name="inquiry_type" value="Sync & licensing" /><span>Sync &amp; licensing</span></label>
+                <label><input type="radio" name="inquiry_type" value="Collaboration" /><span>Collaboration</span></label>
+                <label><input type="radio" name="inquiry_type" value="Something else" /><span>Something else</span></label>
+              </div>
+            </fieldset>
+
+            <div class="row2">
+              <label class="field"><span>Your name</span><input name="name" autocomplete="name" required /></label>
+              <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required /></label>
+            </div>
+            <div class="row2">
+              <label class="field"><span>Organization (optional)</span><input name="organization" autocomplete="organization" /></label>
+              <label class="field date-field on" id="dateField"><span>Event date (optional)</span><input type="date" name="event_date" /></label>
+            </div>
+            <label class="field"><span>Your note</span><textarea name="message" required placeholder="Tell us a little about it…"></textarea></label>
+            <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <button class="send" type="submit" id="send">Send it <span aria-hidden="true">✉</span></button>
+            <p class="status" id="status" role="status"></p>
+          </div>
+        </form>
+
+        <div class="face envelope" aria-live="polite">
+          <div>
+            <div class="seal" aria-hidden="true">N</div>
+            <h2 class="script">Sent, thank you</h2>
+            <p>Your note is on its way to Destined Echo.<br>We'll be in touch soon.</p>
+            <button class="textlink" id="again">Write another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="next"><a href="index.html"><span>back to</span>the beginning</a></div>
+</main>
+
+<footer class="foot">
+  <a href="https://www.youtube.com/@nicolehernandezcolin" target="_blank" rel="noopener me">YouTube</a>
+  <a href="https://www.tiktok.com/@nicolehernandezcolin" target="_blank" rel="noopener me">TikTok</a>
+  <a href="https://linktr.ee/nicolehernandezcolin" target="_blank" rel="noopener me">Linktree</a>
+  <a href="https://music.apple.com/us/album/layers/1818138787" target="_blank" rel="noopener">Apple Music</a>
+  <small>© 2026 Nicole Hernandez · Managed by Destined Echo · San Diego</small>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+(() => {
+  // ── Where inquiries go ──────────────────────────────────────────
+  // Paste the Web3Forms access key made with Destined Echo's email
+  // (get one free at https://web3forms.com). Submissions are emailed
+  // to that address; the address itself never appears on the site.
+  const WEB3FORMS_KEY = 'PASTE-DESTINED-ECHO-ACCESS-KEY-HERE';
+  // ────────────────────────────────────────────────────────────────
+
+  const form = document.getElementById('form');
+  const letter = document.getElementById('letter');
+  const status = document.getElementById('status');
+  const send = document.getElementById('send');
+  const dateField = document.getElementById('dateField');
+
+  // only ask for an event date when it's a booking
+  form.addEventListener('change', e => {
+    if (e.target.name === 'inquiry_type') dateField.classList.toggle('on', e.target.value === 'Booking');
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    status.textContent = '';
+    if (!form.checkValidity()) {
+      const bad = form.querySelector(':invalid');
+      status.textContent = bad.type === 'email' ? 'Please add a valid email so we can write back.' : 'Please fill in your name, email and a short note.';
+      bad.focus();
+      return;
+    }
+    if (WEB3FORMS_KEY.startsWith('PASTE')) {
+      status.textContent = 'The inquiry form is almost ready. Please check back soon.';
+      return;
+    }
+    const data = Object.fromEntries(new FormData(form));
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: `${data.inquiry_type} inquiry for Nicole Hernandez — ${data.name}`,
+      from_name: 'nicolehernandez.co',
+      replyto: data.email,
+      ...data
+    };
+    send.disabled = true;
+    send.firstChild.textContent = 'Sending ';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const out = await res.json();
+      if (!out.success) throw new Error(out.message);
+      letter.classList.add('sent');
+      form.reset();
+      dateField.classList.add('on');
+    } catch (err) {
+      status.textContent = 'Something went wrong sending that. Please try again in a moment.';
+    } finally {
+      send.disabled = false;
+      send.firstChild.textContent = 'Send it ';
+    }
+  });
+
+  document.getElementById('again').addEventListener('click', () => letter.classList.remove('sent'));
+})();
+</script>
+</body>
+</html>
