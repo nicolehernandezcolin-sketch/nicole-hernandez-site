@@ -126,7 +126,7 @@ a.row:hover .arrow{transform:translateX(6px);opacity:1}
       <span class="t">Nicole Hernandez's music crosses borders, languages and genres<small>A conversation after her set at the KPBS San Diego Book Festival: <em>Layers</em>, writing in two languages, and the stories behind "Viste" and "Rina."</small></span>
       <span class="arrow" aria-hidden="true">↗</span>
     </a>
-    <a class="row" data-peek="images/nicole-hernandez-layers-portrait.jpg" href="https://www.kpbs.org/news/arts-culture/2026/05/12/10-standout-san-diego-artists-from-the-2026-npr-tiny-desk-contest" target="_blank" rel="noopener">
+    <a class="row" data-peek="images/press-kpbs-tiny-desk.jpg" href="https://www.kpbs.org/news/arts-culture/2026/05/12/10-standout-san-diego-artists-from-the-2026-npr-tiny-desk-contest" target="_blank" rel="noopener">
       <span class="src">KPBS · May 2026</span>
       <span class="t">10 standout San Diego artists from the 2026 NPR Tiny Desk Contest<small>"Viste," sung in Spanish, made the list.</small></span>
       <span class="arrow" aria-hidden="true">↗</span>
@@ -230,6 +230,10 @@ a.row:hover .arrow{transform:translateX(6px);opacity:1}
   rows.forEach(r => {
     r.addEventListener('pointerenter', () => {
       active = r; peek.classList.add('on');
+      const im = imgs[r.dataset.peek];
+      const ratio = im.naturalWidth ? im.naturalWidth / im.naturalHeight : 2 / 3;
+      peek.style.width = (ratio > 1 ? 360 : 220) + "px";
+      peek.style.aspectRatio = ratio;
       Object.entries(imgs).forEach(([s, im]) => im.classList.toggle('on', s === r.dataset.peek));
     });
     r.addEventListener('pointerleave', () => { active = null; peek.classList.remove('on'); });
