@@ -124,7 +124,7 @@ body{overflow:hidden}
 
 .corner{position:absolute;z-index:6;bottom:22px;font-family:var(--type);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;animation:up 1.2s 2s both}
 .corner.l{left:clamp(16px,4vw,40px);text-decoration:none}
-.corner.r{right:clamp(16px,4vw,40px);display:flex;gap:18px}
+.corner.r{right:clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 14px;max-width:46vw;letter-spacing:.16em}
 .corner a{text-decoration:none;opacity:.75}
 .corner a:hover,.corner.l:hover{opacity:1;color:var(--amber)}
 .corner .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:8px;box-shadow:0 0 10px var(--amber);animation:pulse 2.4s ease-in-out infinite}
