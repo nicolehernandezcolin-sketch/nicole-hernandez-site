@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /archive/
-Disallow: /tools/
-Disallow: /brand/
 Sitemap: https://nicolehernandez.co/sitemap.xml

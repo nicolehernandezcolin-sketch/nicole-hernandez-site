@@ -22,9 +22,3 @@ Shared styles and behaviour live in `assets/site.css` and `assets/site.js`.
 `contact.html` sends through [Web3Forms](https://web3forms.com). Paste the access key
 created with Destined Echo's email into `WEB3FORMS_KEY` near the bottom of the file.
 
-## Wordmark
-Re-cut the transparent wordmark from the original artwork with:
-
-```
-swift tools/make_wordmark.swift brand/nicole-hernandez-logo-blue.png images
-```
