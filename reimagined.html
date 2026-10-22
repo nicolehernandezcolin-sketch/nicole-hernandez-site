@@ -30,7 +30,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Meddon&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime&family=Homemade+Apple&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime&family=Homemade+Apple&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/site.css" />
 <style>
 :root{
@@ -147,7 +147,7 @@
 .postcard .right{border-left:1px dashed rgba(10,71,168,.3);padding-left:16px;display:flex;flex-direction:column;gap:12px}
 .logo-stamp{align-self:flex-end;width:118px;padding:6px;transform:rotate(3deg);background:radial-gradient(circle, transparent 3px, #fffaf0 3.5px) -5px -5px/10px 10px;filter:drop-shadow(0 3px 5px rgba(26,43,85,.25))}
 .logo-stamp > span{display:grid;place-items:center;gap:6px;aspect-ratio:4/5;padding:12px 8px;background:var(--cobalt);outline:1px solid rgba(255,250,240,.55);outline-offset:-5px}
-.logo-stamp .stamp-wm{font-size:.62rem;line-height:1.15;color:#fffaf0}
+.logo-stamp .stamp-wm{font-size:1.1rem;line-height:.9;color:#fffaf0}
 .logo-stamp small{font-family:var(--type);font-size:.42rem;letter-spacing:.14em;color:#fffaf0;opacity:.85;text-align:center}
 .postcard .stamp-pick{display:flex;gap:6px;justify-content:flex-end}
 .postcard .stamp-pick button{width:40px;height:48px;border:0;cursor:pointer;font-size:1.2rem;border-radius:2px;background:var(--sea-light);opacity:.45;transition:opacity .2s, transform .2s}
@@ -213,7 +213,7 @@
 <body>
 
 <header class="bar">
-  <a class="home" href="index.html" aria-label="Nicole Hernandez, home"><span class="wm"><span>Nicole</span><span>Hernandez<i>✦</i></span></span></a>
+  <a class="home" href="index.html" aria-label="Nicole Hernandez, home"><span class="wm"><span>Nicole</span><span>Hernandez</span></span></a>
   <nav aria-label="Main">
     <a href="layers.html">Layers</a>
     <a href="reimagined.html" aria-current="page">Reimagined</a>
@@ -693,7 +693,7 @@
     for (let j = sy - 14; j <= sy + sh + 14; j += 18) { [sx - 14, sx + sw + 14].forEach(xx => { x.beginPath(); x.arc(xx, j, 6, 0, 7); x.fill(); }); }
     x.fillStyle = '#0a47a8'; x.fillRect(sx, sy, sw, sh);
     x.strokeStyle = 'rgba(255,250,240,.6)'; x.lineWidth = 2; x.strokeRect(sx + 8, sy + 8, sw - 16, sh - 16);
-    x.fillStyle = '#fffaf0'; x.textAlign = 'left'; x.font = '24px "Meddon"';
+    x.fillStyle = '#fffaf0'; x.textAlign = 'left'; x.font = '44px "Herr Von Muellerhoff"';
     x.fillText('Nicole', sx + 22, sy + 110); x.fillText('Hernandez', sx + 30, sy + 146);
     x.fillStyle = '#fffaf0'; x.textAlign = 'center'; x.font = '16px "Courier Prime"'; x.fillText('ISLA REIMAGINED · 2027', sx + sw / 2, sy + sh - 30);
     x.font = '60px serif'; x.fillText(l.stamp, sx - 70, sy + 200);
